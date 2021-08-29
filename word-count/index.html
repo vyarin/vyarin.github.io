@@ -2,17 +2,37 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles.css">
-        
+        <script src="script.js"></script>
+
         <title>Word Count</title>
     </head>
     <body>
-        <h1>
-            Word Count and Other Utilities
-        </h1>
-        <form>
-            <label for="text-input">Paste your text here:</label>
-            <input id="text-input" type="text">
-            <button type="submit">Submit</button>
-        </form>
+        <nav class="navbar">
+            <span class="logo">Word Counter</span>
+        </nav>
+        <main>
+            <h1>
+                Word Counter
+            </h1>
+
+            <div class="text-input">
+                <label for="textbox">Paste your text here:</label>
+                <textarea id="textbox" onkeyup="count_words()" rows="20"></textarea>
+            </div>
+            <div class="counter">
+                <div class="char-count">
+                    <h2>Character Count</h2>
+                    <span id="char-count-value">0</span>
+                </div>
+                <div class="word-count">
+                    <h2>Word Count</h2>
+                    <span id="word-count-value">0</span>
+                </div>
+                <div class="read-time">
+                    <h2>Read Time</h2>
+                    <span id="read-time-value">0</span>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
