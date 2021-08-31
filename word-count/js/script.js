@@ -1,3 +1,5 @@
+import { round, floor } from 'mathjs'
+
 function count_words() {
     let text = document.getElementById("textbox").value;
     document.getElementById("char-count-value").innerHTML = text.length;
