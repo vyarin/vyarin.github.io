@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../img/icon.png">
+    <title>Exploring Judaism in Greenpoint | Wandering The Faiths</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link href="../css/styles.css" rel="stylesheet" id="theme-sheet">
+    <link href="../css/post-styles.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <script src="../plugins/sticky-sidebar.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const currentTheme = localStorage.getItem("theme");
+
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("visible");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let theme = document.body;
+            let icon = document.getElementById("theme-icon");
+
+            function switchTheme() {
+                if (icon.innerHTML.trim().trimStart() == "light_mode") {
+                    theme.classList.add("dark");
+                    icon.innerHTML = "dark_mode";
+                    localStorage.setItem("theme", "dark");
+                }
+                else {
+                    theme.classList.remove("dark");
+                    icon.innerHTML = "light_mode";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+
+            let toggler = document.querySelector(".theme-toggle");
+            toggler.addEventListener("click", switchTheme);
+
+            if (currentTheme == "dark") {
+                theme.classList.add("dark");
+                icon.innerHTML = "dark_mode";
+            }
+
+            let close = document.getElementById("close");
+            close.onclick = function () {
+                togglePopup();
+            }
+
+            window.onkeydown = function (event) {
+                if (event.keyCode == 13 && event.target.nodeName == 'INPUT' && document.getElementById("email-subscription").value != "") {
+                    let inputText = document.getElementById("email-subscription").value;
+
+                    if ((inputText).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        inputText = "";
+
+                        togglePopup();
+
+                        if (event.preventDefault) event.preventDefault();
+                        return false;
+                    }
+
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../index.html">
+            WANDERING THE FAITHS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"><span class="toggler-text">menu</span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DESTINATIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="./new-york.html" class="dropdown-item">New York</a></li>
+                        <li><a href="../hanoi/hanoi.html" class="dropdown-item">Hanoi</a></li>
+                        <li><a href="../kathmandu/kathmandu.html" class="dropdown-item">Kathmandu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../workscited.html" class="nav-link">WORKS CITED</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link theme-toggle">
+                        <span class="material-icons" id="theme-icon">
+                            light_mode
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="dismiss">
+                <button id="close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+            <span class="material-symbols-outlined" id="success">
+                check_circle
+            </span>
+            <h1>THANK YOU FOR SUBSCRIBING!</h1>
+            <p>I cannot actually send you an email because this doesn't work but thank you anyway!</p>
+        </div>
+    </div>
+    <main>
+        <div id="page">
+            <div id="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        Exploring Judaism in Greenpoint
+                    </h2>
+                    <div class="post-info">
+                        <div class="profile-picture">
+                            <img src="../img/pfp.jpg" alt="Profile picture of the author">
+                        </div>
+                        <div class="profile-text">
+                            <div class="name">
+                                <p>
+                                    <a>Vivian Tran</a>
+                                </p>
+                            </div>
+                            <div class="time-date">
+                                <p>5 min read<span>&middot;</span>Posted October 20, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>To learn more about Orthodox Judaism, I spent a week and a half in Brooklyn, New York, home to
+                        over 800,000 Jews. During this week, I was able to celebrate Yom Kippur with the locals, which
+                        helped me tremendously in understanding Jewish culture. I was lucky enough to meet Shira
+                        Adelstein, a girl of my age who guided me through the city. If you come across her, feel free to
+                        say hello!</p>
+                    <p>I arrived in New York at LaGuardia airport, which actually blew me away. It was so fancy! I was
+                        super mesmerized by the fountain at Terminal B. I may have lost track of time at the airport and
+                        missed the morning service at the synagogue I was going to visit in Greenpoint. It worked out
+                        pretty well though, as hadn't I been distracted, I wouldn't have met Shira while asking for some
+                        directions.</p>
+                    <img src="../img/laguardia-airport.jpg" alt="LaGuardia Airport in New York">
+                    <p class="caption">
+                        <caption>The fancy airport.</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        About Shira
+                    </h3>
+                    <p>Shira actually lived in Illinois for most of her childhood before moving to New York for her
+                        parents' work. She, a reform Jew, has a unique perspective as she was able to compare between
+                        many different branches of Judaism as she moved. As a local herself, she also showed me many
+                        great places to eat—she's a bit of a foodie.
+                    </p>
+
+                    <h3 class="post-heading">
+                        Creed
+                    </h3>
+                    <p>I was able to experience a synagogue service in the morning with Shira at the <a
+                            href="https://www.greenpointshul.org/">Greenpoint Shul</a>. There, I sat in the womens'
+                        section. Everyone was extremely nice and welcoming! I was able to hear the Shema for myself,
+                        which is an equivalent to the Apostles Creed in Christianity. The Shema is a way for believers
+                        to declare their faith in God. Everybody started off by thanking God for creation as well as the
+                        revelation. They then read the Shema from their prayer books, which consists of Deuteronomy
+                        6:4–9, Deuteronomy 11:13–21 and Numbers 15:37–41. They all end by thanking God for redemption
+                        which closes the morning Shema.</p>
+                    <img src="../img/greenpoint-shul.jpeg" alt="The Greenpoint Shul">
+                    <p class="caption">
+                        <caption>Outside the Greenpoint Shul in Brooklyn.</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        Code
+                    </h3>
+                    <p>Shira first told me about the laws that Jews are to follow while she toured me around Greenpoint.
+                        Contained in the Torah, one of the hold books of the Jewish bible, are 613 laws, which range
+                        from commentating on morals to clothing to diets. Depending on the type of branch of Judaism the
+                        individual follows, how closely they follow these laws varies.</p>
+                    <p>As a reform Jew herself, Shira does not literally follow all these laws, rather adapting them to
+                        her present life. Hasidic Jews, however, follow the Torah exactly. A large population of them
+                        live around this area in Greenpoint. Shira pointed out to me their clothing as an external
+                        example of their way of living. Women are only seen wearing modest dresses. The men are all
+                        wearing black suits with a kippot, <dfn title="A cylindrical fur hat">shtreimel</dfn> or a black
+                        hat.</p>
+
+                    <h3 class="post-heading">
+                        Cult
+                    </h3>
+                    <p>Shira was kind enough to invite me to observe Shabbat with her family. Shabbat is the rest day
+                        for Jews, which started at 6:14 PM on Friday and ended at 7:11 PM on Saturday. As a day of rest,
+                        Jews on Shabbat do no form of work, including things such as even flicking a light switch or
+                        heating up food. In this day and age, Jews diligently prepare for Shabbat before it begins. A
+                        few days prior, Shira showed me how her family would typically prepare for Shabbat. Everything
+                        from the food to the clothes are prepared beforehand. Shira's family has a special mode on her
+                        oven that keeps her premade food warm without the need for her to adjust the temperature of the
+                        oven, which is prohibited. We would all eat together with the table beautifully set with all
+                        sorts of food.
+                    </p>
+                    <img src="../img/challah.jpg" alt="Jewish bread loaf">
+                    <p class="caption">
+                        <caption>Shira's family made some challah for Shabbat.</caption>
+                    </p>
+                    <p>
+                        This is quite similar to our observance of the Sabbath day on Sunday for Christians. Both
+                        represent the day that God rested after He created the world.
+                    </p>
+                    <h3 class="post-heading">
+                        Community
+                    </h3>
+                    <p>I came in time on this trip to experience Yom Kippur firsthand—the holiest day of the year for
+                        Jews. I was without Shira at this point, as she had to celebrate with her family as well. On
+                        that day, I was able to observe the changes around Greenpoint. All the businesses in the area
+                        had closed. I would only see people travelling by bike, as like Shabbat, no work is to be done.
+                        I also saw that some people were wearing white robes, which I found out later from Shira that
+                        the garment was called a kittel. It is a piece of clothing to resemble angels and represent
+                        purity, a big theme during Yom Kippur.</p>
+                    <img src="../img/yom-kippur.jpg"
+                        alt="Two Jewish childrn wearing a sweater with two Jewish men in a white robe">
+                    <p class="caption">
+                        <caption>Some people out during Yom Kippur. The kittel can be seen worn by the men.</caption>
+                    </p>
+                    <p>Around sunset, I heard a majestic sound of a horn. I would learn that this horn is called the
+                        shofar and has a connection to the purpose of Yom Kippur, being the commemoration of the
+                        Israelites' exodus. The shofar being blown indicated that they were now free from the Egyptians.
+                        Not many people were outside, especially during the morning as they were attending their five
+                        prayer services at the synagogue. Shira was so excited to tell me how she was able to
+                        successfully fast for the entire length this year, meaning that she met the full requirements in
+                        afflicting her soul. Yom Kippur is a day of atonement, focused on spiritual well being above all
+                        other work. She was extremely happy to have done it and came out really in peace afterwards.
+                        It's
+                        a beautiful celebration.</p>
+
+                    <h3 class="post-heading">
+                        What a Great Visit!
+                    </h3>
+                    <p>Thank you Shira for helping me around the place. Greenpoint is a really lovely town with equally
+                        lovely people. This trip helped me learn so much about Judaism as well. Everybody was so
+                        welcoming and open to any questions I have. See you soon, Greenpoint!</p>
+                </div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div id="about" class="item">
+                    <img src="../img/pfp.jpg" alt="profile picture of the author">
+                    <h3>ABOUT THE AUTHOR</h3>
+                    <p>I'm Vivian! I grew up in Canada but my desire to learn has brought me around the world. I love to
+                        document and learn about the people, locations, food, as well as the religions.</p>
+                    <a href="../about.html">READ MORE</a>
+                </div>
+                <div id="subscribe" class="item">
+                    <iframe title="for-form-submission" name="form" id="email-input"></iframe>
+                    <form action="form" method="post" target="form">
+                        <h3>SUBSCRIBE</h3>
+                        <label for="email-subscription">Enter your email address</label>
+                        <input type="text" class="text-input" id="email-subscription" placeholder="name@example.com"
+                            autocomplete="off">
+                    </form>
+                </div>
+                <div id="recent-posts" class="item">
+                    <h2>RECENT POSTS</h2>
+                    <div class="post">
+                        <p class="date">November 5, 2024</p>
+                        <h3>Hinduism and Mount Everest</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">October 8, 2024</p>
+                        <h3>Food in Greenpoint: The Little Poland of Brooklyn</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">May 18, 2024</p>
+                        <h3>The Lost Language of Vietnam</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">January 22, 2024</p>
+                        <h3>I Got Pickpocketed! How Not To Be Like Me</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="foot-row">
+                <h1 class="footer-title"><a href="../index.html">WANDERING THE FAITHS</a></h1>
+            </div>
+            <div class="foot-row">
+                <h2>VIVIAN TRAN</h2>
+                <ul>
+                    <li><a class="foot-link" href="../about.html">About</a></li>
+                    <li><a class="foot-link" href="mailto:viviblogproject@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-row">
+                <h2>TRAVEL</h2>
+                <ul>
+                    <li><a class="foot-link" href="./new-york.html">New York</a></li>
+                    <li><a class="foot-link" href="../hanoi/hanoi.html">Hanoi</a></li>
+                    <li><a class="foot-link" href="../kathmandu/kathmandu">Kathmandu</a></li>
+                </ul>
+            </div>
+            <div class="foot-row media">
+                <div class="icons">
+                    <a class="foot-link" href="https://github.com/vyarin"><span class="icon-text">Github</span><i
+                            class="bi bi-github"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Google</span><i class="bi bi-google"></i></a>
+                    <a class="foot-link" href="https://twitter.com/wanderingfaiths"><span class="icon-text">Twitter</span><i
+                            class="bi bi-twitter"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Youtube</span><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+                <p>Copyright &#169; 2023 Vivian Tran</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

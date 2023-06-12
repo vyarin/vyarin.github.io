@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../img/icon.png">
+    <title>New York | Wandering The Faiths</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <link href="../css/styles.css" rel="stylesheet" id="theme-sheet">
+    <link href="../css/post-styles.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const currentTheme = localStorage.getItem("theme");
+
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("visible");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let theme = document.body;
+            let icon = document.getElementById("theme-icon");
+
+            function switchTheme() {
+                if (icon.innerHTML.trim().trimStart() == "light_mode") {
+                    theme.classList.add("dark"); 
+                    icon.innerHTML = "dark_mode";
+                    localStorage.setItem("theme", "dark");
+                }
+                else {
+                    theme.classList.remove("dark");
+                    icon.innerHTML = "light_mode";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+
+            let toggler = document.querySelector(".theme-toggle");
+            toggler.addEventListener("click", switchTheme);
+
+            if (currentTheme == "dark") {
+                theme.classList.add("dark");
+                icon.innerHTML = "dark_mode";
+            }
+
+            let close = document.getElementById("close");
+            close.onclick = function() {
+                togglePopup();
+            }
+
+            window.onkeydown = function(event) {
+                if(event.keyCode == 13 && event.target.nodeName == 'INPUT' && document.getElementById("email-subscription").value != ""){
+                    let inputText = document.getElementById("email-subscription").value;
+                    
+                    if ((inputText).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        inputText = "";
+
+                        togglePopup();
+            
+                        if(event.preventDefault) event.preventDefault();
+                        return false;
+                    }
+                    
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../index.html">
+            WANDERING THE FAITHS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"><span class="toggler-text">menu</span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DESTINATIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="../new-york/new-york.html" class="dropdown-item">New York</a></li>
+                        <li><a href="../hanoi/hanoi.html" class="dropdown-item">Hanoi</a></li>
+                        <li><a href="../kathmandu/kathmandu.html" class="dropdown-item">Kathmandu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../workscited.html" class="nav-link">WORKS CITED</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link theme-toggle">
+                        <span class="material-icons" id="theme-icon">
+                            light_mode
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="dismiss">
+                <button id="close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+            <span class="material-symbols-outlined" id="success">
+                check_circle
+            </span>
+            <h1>THANK YOU FOR SUBSCRIBING!</h1>
+            <p>I cannot actually send you an email because this doesn't work but thank you anyway!</p>
+        </div>
+    </div>
+    <main>
+        <div id="header" class="ny-bg">
+            <h1>
+                NEW YORK DIRECTORY
+            </h1>
+        </div>
+        <div id="page">
+            <div id="directory">
+                <div>
+                    <h2 class="title">
+                        NEW YORK POSTS
+                    </h2>
+                </div>
+                <div class="posts">
+                    <div class="item">
+                        <a href="judaism.html" class="item-card">
+                            <img class="thumb" src="../img/judaism.jpg" alt=""></img>
+                            <article>
+                                <p class="date">October 20, 2024</p>
+                                <h3>Exploring Judaism in Greenpoint</h3>
+                                <p>To learn more about Orthodox Judaism, I spent a week and a...</p>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item-card">
+                            <img class="thumb" src="../img/greenpoint-food.jpg" alt=""></img>
+                            <article>
+                                <p class="date">October 8, 2024</p>
+                                <h3>Food in Greenpoint: The Little Poland of Brooklyn</h3>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item-card">
+                            <img class="thumb" src="../img/greenpoint-shul-icon.jpg" alt=""></img>
+                            <article>
+                                <p class="date">October 5, 2024</p>
+                                <h3>The Greenpoint Shul</h3>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar">
+                <div id="about" class="item">
+                    <img src="../img/pfp.jpg" alt="profile picture of the author">
+                    <h3>ABOUT THE AUTHOR</h3>
+                    <p>I'm Vivian! I grew up in Canada but my desire to learn has brought me around the world. I love to
+                        document and learn about the people, locations, food, as well as the religions.</p>
+                    <a href="../about.html">READ MORE</a>
+                </div>
+                <div id="subscribe" class="item">
+                    <iframe title="for-form-submission" name="form" id="email-input"></iframe>
+                    <form action="form" method="post" target="form">
+                        <h3>SUBSCRIBE</h3>
+                        <label for="email-subscription">Enter your email address</label>
+                        <input type="text" class="text-input" id="email-subscription" placeholder="name@example.com" autocomplete="off">
+                    </form>
+                </div>
+                <div id="recent-posts" class="item">
+                    <h2>RECENT POSTS</h2>
+                    <div class="post">
+                        <p class="date">November 5, 2024</p>
+                        <h3>Hinduism and Mount Everest</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">October 8, 2024</p>
+                        <h3>Food in Greenpoint: The Little Poland of Brooklyn</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">May 18, 2024</p>
+                        <h3>The Lost Language of Vietnam</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">January 22, 2024</p>
+                        <h3>I Got Pickpocketed! How Not To Be Like Me</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="foot-row">
+                <h1 class="footer-title"><a href="../index.html">WANDERING THE FAITHS</a></h1>
+            </div>
+            <div class="foot-row">
+                <h2>VIVIAN TRAN</h2>
+                <ul>
+                    <li><a class="foot-link" href="../about.html">About</a></li>
+                    <li><a class="foot-link" href="mailto:viviblogproject@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-row">
+                <h2>TRAVEL</h2>
+                <ul>
+                    <li><a class="foot-link" href="../new-york/new-york.html">New York</a></li>
+                    <li><a class="foot-link" href="../hanoi/hanoi.html">Hanoi</a></li>
+                    <li><a class="foot-link" href="../kathmandu/kathmandu">Kathmandu</a></li>
+                </ul>
+            </div>
+            <div class="foot-row media">
+                <div class="icons">
+                    <a class="foot-link" href="https://github.com/vyarin"><span class="icon-text">Github</span><i class="bi bi-github"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Google</span><i class="bi bi-google"></i></a>
+                    <a class="foot-link" href="https://twitter.com/wanderingfaiths"><span class="icon-text">Twitter</span><i class="bi bi-twitter"></i></a>
+                    <a class="foot-link" href="https://www.youtube.com/@wanderingthefaiths"><span class="icon-text">Youtube</span><i class="bi bi-youtube"></i></a>
+                </div>
+                <p>Copyright &#169; 2023 Vivian Tran</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

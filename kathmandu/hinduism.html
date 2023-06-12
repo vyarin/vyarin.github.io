@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../img/icon.png">
+    <title>Saying Hi to Hinduism in Kathmandu | Wandering The Faiths</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link href="../css/styles.css" rel="stylesheet" id="theme-sheet">
+    <link href="../css/post-styles.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <script src="../plugins/sticky-sidebar.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const currentTheme = localStorage.getItem("theme");
+
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("visible");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let theme = document.body;
+            let icon = document.getElementById("theme-icon");
+
+            function switchTheme() {
+                if (icon.innerHTML.trim().trimStart() == "light_mode") {
+                    theme.classList.add("dark");
+                    icon.innerHTML = "dark_mode";
+                    localStorage.setItem("theme", "dark");
+                }
+                else {
+                    theme.classList.remove("dark");
+                    icon.innerHTML = "light_mode";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+
+            let toggler = document.querySelector(".theme-toggle");
+            toggler.addEventListener("click", switchTheme);
+
+            if (currentTheme == "dark") {
+                theme.classList.add("dark");
+                icon.innerHTML = "dark_mode";
+            }
+
+            let close = document.getElementById("close");
+            close.onclick = function () {
+                togglePopup();
+            }
+
+            window.onkeydown = function (event) {
+                if (event.keyCode == 13 && event.target.nodeName == 'INPUT' && document.getElementById("email-subscription").value != "") {
+                    let inputText = document.getElementById("email-subscription").value;
+
+                    if ((inputText).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        inputText = "";
+
+                        togglePopup();
+
+                        if (event.preventDefault) event.preventDefault();
+                        return false;
+                    }
+
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../index.html">
+            WANDERING THE FAITHS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"><span class="toggler-text">menu</span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DESTINATIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="../new-york/new-york.html" class="dropdown-item">New York</a></li>
+                        <li><a href="../hanoi/hanoi.html" class="dropdown-item">Hanoi</a></li>
+                        <li><a href="../kathmandu/kathmandu.html" class="dropdown-item">Kathmandu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../workscited.html" class="nav-link">WORKS CITED</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link theme-toggle">
+                        <span class="material-icons" id="theme-icon">
+                            light_mode
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="dismiss">
+                <button id="close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+            <span class="material-symbols-outlined" id="success">
+                check_circle
+            </span>
+            <h1>THANK YOU FOR SUBSCRIBING!</h1>
+            <p>I cannot actually send you an email because this doesn't work but thank you anyway!</p>
+        </div>
+    </div>
+    <main>
+        <div id="page">
+            <div id="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        Saying Hi to Hinduism in Kathmandu
+                    </h2>
+                    <div class="post-info">
+                        <div class="profile-picture">
+                            <img src="../img/pfp.jpg" alt="Profile picture of the author">
+                        </div>
+                        <div class="profile-text">
+                            <div class="name">
+                                <p>
+                                    <a>Vivian Tran</a>
+                                </p>
+                            </div>
+                            <div class="time-date">
+                                <p>6 min read<span>&middot;</span>Posted November 18, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>My final destination for the year was Nepal in an effort to discover more about the oldest
+                        religion in the world, Hinduism. I stayed relatively around Kathmandu this time as there was so
+                        much to see. The city has amazing architecture, with Buddhist and Hindu temples coexisting in
+                        the same place, giving the city a unique mix of architectural styles everywhere you look. I had
+                        the wonderful opportunity of meeting Mr. Thapa, who guided me around the place when I first
+                        arrived.</p>
+                    <p>I have to mention this hotel I stayed in though, <a href="https://www.shankerhotel.com.np/">Hotel
+                            Shanker</a>. My goodness, that hotel was fancy, it was once a palace after all. They served
+                        breakfast in the ballroom! The place itself was extremely quiet and calm which is a great break
+                        from the action outside in Kathmandu. I recommend it.</p>
+                    <img src="../img/hotel-shanker.jpg" alt="A dining room">
+                    <p class="caption">
+                        <caption>The super fancy breakfast area.</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        It's the super runner Mr. Thapa!
+                    </h3>
+                    <p>Mr. Thapa is one of the most athletic people I've seen in my life! He is an amazing marathon
+                        runner as well as an extremely wise mentor. He is currently trying to get his grandchildren to
+                        run with him in the Nepalgunj Marathon, but they don't want to. Maybe I can try to convince them
+                        too. He is also very well versed in Hinduism as he actually taught theology before he retired.
+                        He was very helpful to me whenever I had any questions about Hinduism.</p>
+                    <img src="../img/mr-thapa.jpg" alt="A man walking in the streets of Kathmandu">
+                    <p class="caption">
+                        <caption>Mr. Thapa in 1970.</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        Creed
+                    </h3>
+                    <p>Mr. Thapa recommended me to a yoga retreat at the <a href="https://nepalyogahome.com/">Nepal Yoga
+                            Home</a> if I wanted to learn more about the beliefs of Hinduism. I took the One Night Two
+                        Days Yoga Retreat Package, which took me to the Nagarjun National Park in Kathmandu. The
+                        environment was incredibly serene and overall a lovely place to just let go and just meditate.
+                        The teachers were extremely welcoming and knowledgeable, eager to answer my questions about
+                        Hinduism, not to mention the great food (did I mention that it was great?). I definitely got a
+                        lot out of the retreat. I was eager to tell Mr. Thapa about it when he was available.</p>
+                    <img class="vertical" src="../img/nepal-yoga-home.jpg" alt="A banner reading 'Nepal Yoga Home'">
+                    <p class="caption">
+                        <caption>Outside the yoga home.</caption>
+                    </p>
+                    <p>When the time came, Mr. Thapa told me how yoga was a way in which Hindus can reach <i>brahman</i>
+                        which, in Mr. Thapa's words, is existence itself. It's quite different from salvation in
+                        Christianity, as it does not really have a definite descriptor, but Mr. Thapa described it as
+                        best as he could as “everything, the ultimate reality, you are <i>brahman</i>, I am brahman,
+                        this world is <i>brahman</i>”. This is what all Hindus have in common. Mr. Thapa did make sure
+                        that I understood that Hindus do not exactly have a set creed, every Hindu practices and
+                        interprets Hinduism in their own way, even choosing themselves which deities they choose to
+                        worship. One can freely choose their own path as a Hindu. What a great start to this trip!</p>
+                    <h3 class="post-heading">
+                        Code
+                    </h3>
+                    <p>I was invited by Mr. Thapa to tag along and help him give care packages to the homeless, which he
+                        does monthly. There are over 200,000 homeless people in Nepal, the situation worsening as
+                        populations rise while standards of living lag behind. We went around areas of Kathmandu Valley
+                        while Mr. Thapa talked to me about the importance of doing good deeds, especially in Hinduism.
+                        He told me that doing <i>punya</i>, meaning good deeds, to get good <i>karma</i>. Hindus believe
+                        that enough good <i>karma</i> would break them out of <i>samsara</i> or the cycle of
+                        reincarnation where they reach <i>brahman</i>.</p>
+                    <img src="../img/people-in-camp.jpg" alt="People in tents in a camp">
+                    <p class="caption">
+                        <caption>People left homeless from earthquakes in Nepal from 2015.</caption>
+                    </p>
+                    <p>All this can be summarized into <i>dharma</i>, all the laws that Hindus follow to conduct a good
+                        life. Mr. Thapa made an important distinction to me, however, that he does these deeds out of
+                        the good of his heart. He does not give in order to get something in return, which is one of the
+                        principles in the path of yoga that he follows, <i>Karma Yoga</i>. Hindus follow one of four
+                        yogas of Hinduism, which each have their own guidelines on reaching liberation. Mr. Thapa went
+                        with this one as it aligned with his own morals and overall was a practical yoga considering his
+                        current living situation. <i>Karma Yoga</i> and <i>Bhakti Yoga</i> are two of the most popular
+                        yogas in Hinduism.</p>
+                    <p>Mr. Thapa's charity is incredibly commemorable. Taking the time to create thirty packages and
+                        carrying them around on his own takes great dedication and care. It's wonderful how Hinduism,
+                        too, is based on achieving <i>dharma</i>, conducting good deeds, maintaining
+                        self-discipline—righteousness in general. It allows followers to strive towards improving
+                        themselves, as well as supporting the good that they do already.</p>
+                    <h3 class="post-heading">
+                        Cult
+                    </h3>
+                    <p>I got to meet Mr. Thapa's children, Bishal and Shanti, as they were very intrigued about the
+                        person (me) who met their father. They were really happy that I wanted to explore Hinduism and
+                        invited me to visit the Gorakhnath Mandir with them. Unfortunately, when the time came, only Mr.
+                        Thapa's son only accompanied me to the mandir, as women cannot enter a mandir while on their
+                        menstrual cycle.</p>
+                    <iframe title="Kathmandu map"
+                        src="https://www.google.com/maps/d/embed?mid=1sQSJRr0OSRpkMpVj6v5lQ0PJgPiMbo4&ehbc=2E312F"></iframe>
+                    <p>
+                        When entering the mandir, I had to take off my shoes, which was not much of a shock to do,
+                        rather more homely, as I do the same at home. I immediately heard the “aum” sound as I entered.
+                        Bishal explained that it was the sound of <i>brahman</i>. There were statues of many deities in
+                        the mandir, called murti, which included Shiva, Ganesh, Bhairava and Kali. People would
+                        individually pray. I would observe them walking clockwise around the shrine as well as ring a
+                        bell. Most prominently, there was not much of a congregation. People did this on their own,
+                        whenever they were available to, hence why it was not much of a disturbance to respectfully
+                        observe. The place itself was super calming and beautiful, I recommend anybody visiting
+                        Kathmandu to stop by.
+                    </p>
+                    <h3 class="post-heading">
+                        Community
+                    </h3>
+                    <p>I came to Nepal around this time in order to catch the celebration of Diwali. However, I learned
+                        from Mr. Thapa that Diwali is more commonly known as Tihar in Nepal. The celebration itself
+                        lasts five days, which is from November 1 to November 5 for this year. The celebration itself is
+                        in honour of Yama, the God of Death, but people worship Lakshmi, the Goddess of Wealth. On the
+                        first day, I helped Mr. Thapa take the seeds he collected and disperse them across the street.
+                        This attracted some crows, which are believed to be messengers of messengers of Yama. As crows
+                        are believed to be messengers of bad news in Hinduism, offering these seeds is a way to ask them
+                        not to do so for the year.</p>
+                    <p>After the first day, I was only able to celebrate the third day of Tihar, Gai Tihar, which was
+                        luckily considered the most important day out of the five. It is a day of worship for the cow,
+                        one of the most sacred animals in Hinduism. Mr. Thapa made an effort to point out these stray
+                        cows on the streets of Kathmandu—they are not allowed by law to kill them. Quite the opposite
+                        today, the whole morning is dedicated to offerings and prayers to the cow. In the evening,
+                        people prayed to Lakshmi. The displays of lights were wonderful, the cows too, being decorated
+                        with flowers. This festival marked the end of my trip, and what a beautiful sendoff it was.</p>
+                    <img src="../img/lakshmi-puja.jpg"
+                        alt="A circle of flowers and coloured sand with candles">
+                    <p class="caption">
+                        <caption>A Puja on Tihar</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        Final Thoughts
+                    </h3>
+                    <p>I learned so much about Hinduism on this trip to Nepal. I'm extremely grateful for Mr. Thapa and his children for their unconditional kindness towards me for the whole time I was there. Without them I wouldn’t have been able to fully experience the essence of Kathmandu, I thank them.</p>
+                    <p>I will join you one day on a marathon Mr. Thapa, I promise!</p>
+                </div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div id="about" class="item">
+                    <img src="../img/pfp.jpg" alt="profile picture of the author">
+                    <h3>ABOUT THE AUTHOR</h3>
+                    <p>I'm Vivian! I grew up in Canada but my desire to learn has brought me around the world. I love to
+                        document and learn about the people, locations, food, as well as the religions.</p>
+                    <a href="../about.html">READ MORE</a>
+                </div>
+                <div id="subscribe" class="item">
+                    <iframe title="for-form-submission" name="form" id="email-input"></iframe>
+                    <form action="form" method="post" target="form">
+                        <h3>SUBSCRIBE</h3>
+                        <label for="email-subscription">Enter your email address</label>
+                        <input type="text" class="text-input" id="email-subscription" placeholder="name@example.com"
+                            autocomplete="off">
+                    </form>
+                </div>
+                <div id="recent-posts" class="item">
+                    <h2>RECENT POSTS</h2>
+                    <div class="post">
+                        <p class="date">November 5, 2024</p>
+                        <h3>Hinduism and Mount Everest</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">October 8, 2024</p>
+                        <h3>Food in Greenpoint: The Little Poland of Brooklyn</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">May 18, 2024</p>
+                        <h3>The Lost Language of Vietnam</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">January 22, 2024</p>
+                        <h3>I Got Pickpocketed! How Not To Be Like Me</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="foot-row">
+                <h1 class="footer-title"><a href="../index.html">WANDERING THE FAITHS</a></h1>
+            </div>
+            <div class="foot-row">
+                <h2>VIVIAN TRAN</h2>
+                <ul>
+                    <li><a class="foot-link" href="../about.html">About</a></li>
+                    <li><a class="foot-link" href="mailto:viviblogproject@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-row">
+                <h2>TRAVEL</h2>
+                <ul>
+                    <li><a class="foot-link" href="../new-york/new-york.html">New York</a></li>
+                    <li><a class="foot-link" href="../hanoi/hanoi.html">Hanoi</a></li>
+                    <li><a class="foot-link" href="../kathmandu/kathmandu.html">Kathmandu</a></li>
+                </ul>
+            </div>
+            <div class="foot-row media">
+                <div class="icons">
+                    <a class="foot-link" href="https://github.com/vyarin"><span class="icon-text">Github</span><i
+                            class="bi bi-github"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Google</span><i class="bi bi-google"></i></a>
+                    <a class="foot-link" href="https://twitter.com/wanderingfaiths"><span class="icon-text">Twitter</span><i
+                            class="bi bi-twitter"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Youtube</span><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+                <p>Copyright &#169; 2023 Vivian Tran</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
