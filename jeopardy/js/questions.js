@@ -36,7 +36,7 @@ const data = [
             },
             {
                 "type": "frq",
-                "question": "Audie has not studied for the MCAT® and has to guess every question. A dot plot shows a simulated MCAT® score in 50 trials of simulation below. If Cyd scored a 494 on the MCAT®, is there convincing evidence that he had studied for the MCAT®? Explain.",
+                "question": "Audie has not studied for the MCAT® and has to guess every question. A dot plot shows Audie's simulated MCAT® score in 50 trials of simulation below. If Cyd scored a 494 on the MCAT®, is there convincing evidence that he had studied for the MCAT®? Explain.",
                 "has-image": true,
                 "image": "cat1-800.svg",
                 "answer": "It is highly unlikely that Cyd would score higher than 375 on the MCAT® purely by guessing the scores. As Cyd's score does not appear on the right side of the distribution, there is convincing evidence that he had studied for the MCAT®."
