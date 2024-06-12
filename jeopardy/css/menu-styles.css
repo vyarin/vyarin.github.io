@@ -308,3 +308,21 @@ a, a:hover, a:focus, a:active {
         font-size: 0.8em;
     }
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 2000px) {
+    body {
+        font-size: 1.2em;
+    }
+    .start-screen {
+        width: 60%;
+        height: 50%;
+    }
+    .config {
+        font-size: 1.2em;
+        justify-content: start;
+    }
+    .menu {
+        justify-content: start;
+    }
+}
