@@ -304,4 +304,7 @@ a, a:hover, a:focus, a:active {
     .menu {
         width: 100%;
     }
+    .instructions-text {
+        font-size: 0.8em;
+    }
 }
