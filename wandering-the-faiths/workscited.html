@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works Cited | Wandering the Faiths</title>
+
+    <script>
+        if (localStorage.theme) localStorage.setItem("theme", localStorage.theme);
+    </script>
+
+    <link rel="icon" href="img/icon.png">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <link href="css/styles.css" rel="stylesheet" id="theme-sheet">
+    <link href="css/media.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const currentTheme = localStorage.getItem("theme");
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let theme = document.body;
+            let icon = document.getElementById("theme-icon");
+
+            function switchTheme() {
+                if (icon.innerHTML.trim().trimStart() == "light_mode") {
+                    theme.classList.add("dark");
+                    icon.innerHTML = "dark_mode";
+                    localStorage.setItem("theme", "dark");
+                }
+                else {
+                    theme.classList.remove("dark");
+                    icon.innerHTML = "light_mode";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+
+            let toggler = document.querySelector(".theme-toggle");
+            toggler.addEventListener("click", switchTheme);
+
+            if (currentTheme == "dark") {
+                theme.classList.add("dark");
+                icon.innerHTML = "dark_mode";
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="index.html">
+            WANDERING THE FAITHS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"><span class="toggler-text">menu</span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DESTINATIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="new-york/new-york.html" class="dropdown-item">New York</a></li>
+                        <li><a href="hanoi/hanoi.html" class="dropdown-item">Hanoi</a></li>
+                        <li><a href="kathmandu/kathmandu.html" class="dropdown-item">Kathmandu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="workscited.html" class="nav-link">WORKS CITED</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link theme-toggle">
+                        <span class="material-icons" id="theme-icon">
+                            light_mode
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="works-cited">
+            <h1>WORKS CITED</h1>
+            <p class="citation">Acharya, Tirtha. “Yoga Retreat Course | 1 Night 2 Days Yoga Retreat and Meditation Package.” <i>Nepal Yoga Home</i>, Dec. 2020, nepalyogahome.com/one-night-two-days-yoga-retreat.</p>
+            <p class="citation"><i>BBC - Religions - Buddhism: The Four Noble Truths.</i> www.bbc.co.uk/religion/religions/buddhism/beliefs/fournobletruths_1.shtml.</p>
+            <p class="citation">Berger, Joseph. “For Strictly Observant Jews in Brooklyn, the Sabbath Expands.” <i>The New York Times</i>, 16 Feb. 2023, www.nytimes.com/2023/02/16/nyregion/brooklyn-observant-jews.html.</p>
+            <p class="citation">BJHI. “Neighborhoods | the Brooklyn Jewish Historical Initiative (BJHI).” <i>BJHI</i>, 5 Dec. 2022, brooklynjewish.org/neighborhoods.</p>
+            <p class="citation">Board, Nepal Tourism. <i>Tihar | Festivals in Nepal | Nepal Tourism Board. ntb.gov.np/tihar.</i></p>
+            <p class="citation">Carnes, Tony. “The Jews of Williamsburg and Greenpoint.” <i>A Journey Through NYC Religions</i>, 21 Mar. 2022, nycreligion.info/jews-williamsburg-greenpoint.</p>
+            <p class="citation">“Community Emerging in Unlikely Greenpoint.” <i>BJHI</i>, June 2022, brooklynjewish.org/2022/06/community-emerging-in-unlikely-greenpoint.</p>
+            <p class="citation">Constantinoiu, Marina. “10 Things You Need to Know About Yom Kippur - ISRAEL21c.” <i>ISRAEL21c</i>, 28 Sept. 2022, www.israel21c.org/10-things-you-need-to-know-about-yom-kippur.</p>
+            <p class="citation">“Cultural Atlas.” Cultural Atlas, 2022, culturalatlas.sbs.com.au/religions/buddhism-mahayana/resources/buddhism-mahayana-doctrines-and-philosophy.</p>
+            <p class="citation">Danailova, Hilary. “Brooklyn, the Most Jewish Spot on Earth.” <i>Hadassah Magazine</i>, Jan. 2018, www.hadassahmagazine.org/2018/01/11/brooklyn-jewish-spot-earth.</p>
+            <p class="citation">“Divisions of Buddhism - Buddhist Beliefs - Edexcel - GCSE Religious Studies Revision - Edexcel - BBC Bitesize.” <i>BBC Bitesize</i>, www.bbc.co.uk/bitesize/guides/zf8g4qt/revision/2.</p>
+            <p class="citation"><i>Exploring the City of Temples | Kathmandu Valley | Blog</i>. www.yakandyeti.com/exploring-the-city-of-temples.</p>
+            <p class="citation">Gautam, Skanda. “Tihar 2021: Gai Tihar Observed.” <i>The Himalayan Times</i>, 4 Nov. 2021, thehimalayantimes.com/photo-gallery/tihar-2021-gai-tihar-observed.</p>
+            <p class="citation">“Greenpoint NYC Neighborhood Guide.” <i>Compass</i>, www.compass.com/neighborhood-guides/nyc/greenpoint.</p>
+            <p class="citation">“Hotel Shanker, Lazimpat, Kathmandu, Nepal.” <i>Hotel Shanker, Lazimpat, Kathmandu 44600, Nepal</i>, www.shankerhotel.com.np.</p>
+            <p class="citation"><i>Huong Pagoda: A Buddhist Temple Complex at Vietnam</i>. www.buddhist-art.com/blog/huong-pagoda-a-buddhist-temple-complex-at-vietnam.</p>
+            <p class="citation">Kalwar, Santosh. “No Place Called Home.” <i>The Himalayan Times</i>, 6 Dec. 2022, thehimalayantimes.com/blogs/no-place-called-home.</p>
+            <p class="citation"><i>Karma – Heart of Hinduism</i>. iskconeducationalservices.org/HoH/concepts/key-concepts/karma.</p>
+            <p class="citation">My Jewish Learning. “The Shema.” <i>My Jewish Learning</i>, Oct. 2018, www.myjewishlearning.com/article/the-shema.</p>
+            <p class="citation">Roth, Sam. “Vesak: Celebrating Buddha’s Birthday in Vietnam.” <i>Culture Trip, May 2018</i>, theculturetrip.com/asia/vietnam/articles/vesak-celebrating-buddhas-birthday-in-vietnam.</p>
+            <p class="citation">Tapuzina, Baroness, and Baroness Tapuzina. “Shabbat – a Special Moment in Time - Baroness Tapuzina.” <i>Baroness Tapuzina - Food and Travel in Israel and Abroad</i>, 11 Aug. 2017, www.baronesstapuzina.com/2007/03/29/shabbat-a-special-moment-in-time.</p>
+            <p class="citation">Veena World. “Gorakhnath Mandir: The Most Prominent Temple of Gorakhpur, UP.” <i>Veena World Blog</i>, May 2021, www.veenaworld.com/blog/gorakhnath-mandir-the-most-prominent-temple-of-gorakhpur-up.</p>
+            <p class="citation">“Vesak 2023: What Is It and How Do Buddhists Celebrate Buddha Day or Wesak?” <i>BBC Newsround</i>, 5 May 2023, www.bbc.co.uk/newsround/48106687.</p>
+            <p class="citation">“Williamsburg Tour - Frieda Vizel.” <i>Frieda Vizel</i>, 19 May 2023, friedavizel.com/williamsburg-tour.</p>    
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="foot-row">
+                <h1 class="footer-title"><a href="index.html">WANDERING THE FAITHS</a></h1>
+            </div>
+            <div class="foot-row">
+                <h2>VIVIAN TRAN</h2>
+                <ul>
+                    <li><a class="foot-link" href="about.html">About</a></li>
+                    <li><a class="foot-link" href="mailto:viviblogproject@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-row">
+                <h2>TRAVEL</h2>
+                <ul>
+                    <li><a class="foot-link" href="new-york/new-york.html">USA</a></li>
+                    <li><a class="foot-link" href="hanoi/hanoi.html">Hanoi</a></li>
+                    <li><a class="foot-link" href="kathmandu/kathmandu.html">Nepal</a></li>
+                </ul>
+            </div>
+            <div class="foot-row media">
+                <div class="icons">
+                    <a class="foot-link" href="https://github.com/vyarin"><span class="icon-text">Github</span><i class="bi bi-github"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Google</span><i class="bi bi-google"></i></a>
+                    <a class="foot-link" href="https://twitter.com/wanderingfaiths"><span class="icon-text">Twitter</span><i class="bi bi-twitter"></i></a>
+                    <a class="foot-link" href="https://www.youtube.com/@wanderingthefaiths"><span class="icon-text">Youtube</span><i class="bi bi-youtube"></i></a>
+                </div>
+                <p>Copyright &#169; 2023 Vivian Tran</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

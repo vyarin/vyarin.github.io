@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../img/icon.png">
+    <title>Discovering Hanoi: Buddhism | Wandering The Faiths</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link href="../css/styles.css" rel="stylesheet" id="theme-sheet">
+    <link href="../css/post-styles.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <script src="../plugins/sticky-sidebar.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const currentTheme = localStorage.getItem("theme");
+
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("visible");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let theme = document.body;
+            let icon = document.getElementById("theme-icon");
+
+            function switchTheme() {
+                if (icon.innerHTML.trim().trimStart() == "light_mode") {
+                    theme.classList.add("dark");
+                    icon.innerHTML = "dark_mode";
+                    localStorage.setItem("theme", "dark");
+                }
+                else {
+                    theme.classList.remove("dark");
+                    icon.innerHTML = "light_mode";
+                    localStorage.setItem("theme", "light");
+                }
+            }
+
+            let toggler = document.querySelector(".theme-toggle");
+            toggler.addEventListener("click", switchTheme);
+
+            if (currentTheme == "dark") {
+                theme.classList.add("dark");
+                icon.innerHTML = "dark_mode";
+            }
+
+            let close = document.getElementById("close");
+            close.onclick = function () {
+                togglePopup();
+            }
+
+            window.onkeydown = function (event) {
+                if (event.keyCode == 13 && event.target.nodeName == 'INPUT' && document.getElementById("email-subscription").value != "") {
+                    let inputText = document.getElementById("email-subscription").value;
+
+                    if ((inputText).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        inputText = "";
+
+                        togglePopup();
+
+                        if (event.preventDefault) event.preventDefault();
+                        return false;
+                    }
+
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="../index.html">
+            WANDERING THE FAITHS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"><span class="toggler-text">menu</span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DESTINATIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="../new-york/new-york.html" class="dropdown-item">New York</a></li>
+                        <li><a href="../hanoi/hanoi.html" class="dropdown-item">Hanoi</a></li>
+                        <li><a href="../kathmandu/kathmandu.html" class="dropdown-item">Kathmandu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../workscited.html" class="nav-link">WORKS CITED</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link theme-toggle">
+                        <span class="material-icons" id="theme-icon">
+                            light_mode
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="dismiss">
+                <button id="close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+            <span class="material-symbols-outlined" id="success">
+                check_circle
+            </span>
+            <h1>THANK YOU FOR SUBSCRIBING!</h1>
+            <p>I cannot actually send you an email because this doesn't work but thank you anyway!</p>
+        </div>
+    </div>
+    <main>
+        <div id="page">
+            <div id="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        Discovering Hanoi: Buddhism
+                    </h2>
+                    <div class="post-info">
+                        <div class="profile-picture">
+                            <img src="../img/pfp.jpg" alt="Profile picture of the author">
+                        </div>
+                        <div class="profile-text">
+                            <div class="name">
+                                <p>
+                                    <a>Vivian Tran</a>
+                                </p>
+                            </div>
+                            <div class="time-date">
+                                <p>6 min read<span>&middot;</span>Posted June 2, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>As a Vietnamese person, I was so excited to finally visit the country of my heritage. I made a
+                        plan to travel around Northern and Southern Vietnam to experience the different cultures and
+                        scenery for two weeks. I would mostly stay around Hương Sơn in Hanoi, though. One of my final
+                        destinations would be the Hương Temple complex there, where I was joined by my now-friend, Kiều.
+                    </p>
+                    <img src="../img/huong-boating.jpg" alt="Two people boating in Vietnam">
+                    <p class="caption">
+                        <caption>Kiều and I boating with a friend.</caption>
+                    </p>
+                    <p>Coming to Vietnam for the first time was so fun! It was very different from where I was born but
+                        it's a good kind of difference. It was like discovering a new part of my identity that I never
+                        really was able to see.</p>
+                    <p>The main form of travel was motorbike. Getting used to crossing the road with people still
+                        driving was tough! Make sure to secure all your belongings as some of the drivers may zoom by
+                        the road and take them! Eating traditional Vietnamese food in the country itself was a unique
+                        experience. I was surprised with the price compared to the quality. I went to <a
+                            href="http://www.phole.vn/">Phở Lệ</a> in Ho Chi Minh City per reviews online and for only
+                        60K VND (3.45 CAD, which is a bit more on the expensive side in Vietnam but still), I got a
+                        phenomenal-tasting bowl of phở!
+                    </p>
+                    <img src="../img/pho-le.jpg" alt="A bowl of phở">
+                    <p class="caption">
+                        <caption>Eating some phở.</caption>
+                    </p>
+                    <p>I had some trouble understanding Vietnamese people in the North due to the difference in dialect,
+                        but that did not stop me from making acquaintances there. Up in Hương, I met Kiều Bùi, who would
+                        help guide me through the religion of Buddhism. She also helped me get used to the Northern
+                        Vietnamese dialect (thank goodness!).</p>
+                    <h3 class="post-heading">
+                        Meet Kiều Bùi
+                    </h3>
+                    <p>Kiều is a third year student at Hà Tĩnh University, majoring in the Arts. Her father's side is
+                        Christian while her mother's is Buddhist. She herself practices Buddhism. Kiều takes a large
+                        interest in religious art, occasionally travelling around the world to view and analyze various
+                        pieces of art, although her favourite place is still the Vietnam National Fine Arts Museum.
+                        She's an amazing painter as well. If you are around Hanoi, please visit her art shop!</p>
+                    <img class="vertical" src="../img/kieu-motorbike.jpg" alt="A girl on a motorcycle">
+                    <p class="caption">
+                        <caption>Kiều on a motorbike (please excuse my night photo quality).</caption>
+                    </p>
+                    <h3 class="post-heading">
+                        Creed
+                    </h3>
+                    <p>Kiều practices <i>Mahayana Buddhism</i>, one of the two main divisions of Buddhism. The other
+                        division, being <i>Theravada Buddhism</i>, is more traditional, with many being monks or nuns.
+                        Kiều showed a necklace that she was gifted that represented the Three Jewels of Buddhism, which
+                        guide
+                        the central beliefs of a Buddhist: Buddha, <i>dharma</i> and <i>sangha</i>, which was quite
+                        surprising as I expected some type of longer creed like the Apostles Creed. Dharma was
+                        familiar to me from Hinduism, demonstrating how closely related both religions are, Buddhism
+                        being developed from Hinduism.</p>
+
+                    <p>The first jewel is Buddha, the teacher, which shows how we can
+                        do the same as Buddha to represent how us too can reach enlightenment. The Buddha teaches that
+                        people can break out of the cycle of reincarnation by becoming enlightened, reaching the state
+                        of <i>nirvana</i>. By following these teachings, Kiều hopes to become enlightened. </p>
+                    <p>The second is dharma, which are the teachings of Buddha. Kiều gave me the main ones, which
+                        included:
+                    </p>
+                    <ul>
+                        <li>The Three Jewels</li>
+                        <li>The Three Universal Truths</li>
+                        <li>The Four Noble Truths</li>
+                        <li>The Noble Eightfold Path</li>
+                    </ul>
+                    <p>The last was sangha, the Buddhist community. One's community can help the individual
+                        through their spiritual journey. This includes people like teachers and even
+                        <i>Bodhisattvas</i>, Buddhists who have reached enlightenment but choose to stay in
+                        reincarnation to help others reach it too. Mahayana Buddhists like Kiều may choose to remain in
+                        reincarnation while Theravada Buddhists strive for freedom.
+                    </p>
+                    <img src="../img/maitreya.jpg" alt="A golden Buddhist statue">
+                    <p class="caption">
+                        <caption>Maitreya, a Bodhisattva.</caption>
+                    </p>
+                    <p>There's a huge green statue of the Buddha in there along with a plethora of others. Every temple
+                        there had a statue of the Buddha somewhere. As well, there were candles and the smell of incense
+                        present—brings me back to some family gatherings. We stopped last at the Thiên Trù Pagoda, which
+                        is the central temple of the complex, where I observed people worshipping. Most people here who
+                        were doing so were silently meditating. Some made offerings which represented showing respect to
+                        the Three Jewels. They would light incense, light a candle then give an offering of some sort of
+                        fruit or flowers. Kiều made a big distinction to me, however, that Buddhists do not worship
+                        Buddha, nor any other deities. This is different from Christianity where one would worship God.
+                        Buddhists only highly regard Buddha and follow his teachings.</p>
+                    <h3 class="post-heading">
+                        Code
+                    </h3>
+                    <p>Kiều explained that there really isn't one holy book, like the Bible, that contains all Mahayana
+                        beliefs, her branch accepting a variety of different texts of a variety of genres. Kiều gifted
+                        me a copy of the Jatakas, a rather humourous collection of the former lives of the Buddha, which
+                        serves to illustrate the life of a Bodhisattva. To save me from having to read millions of words
+                        in order to uncover the principles of Buddhism, Kiều summarized it to me over a dinner (bless
+                        her soul, thank you so much). She introduced me to the Five Precepts:
+                    </p>
+                    <ul>
+                        <li>Refraining from harming the living, hence why she is vegetarian. The dinner was vegetarian too, and it tasted delicious.
+                        </li>
+                        <li>Avoiding stealing</li>
+                        <li>Avoiding sexual misconduct </li>
+                        <li>Refraining from using false speech, such as lying</li>
+                        <li>Refraining from using false speech, such as lying</li>
+                    </ul>
+                    <p>As a reform Jew herself, Shira does not literally follow all these laws, rather adapting them to
+                        her present life. Hasidic Jews, however, follow the Torah exactly. A large population of them
+                        live around this area in Greenpoint. Shira pointed out to me their clothing as an external
+                        example of their way of living. Women are only seen wearing modest dresses. The men are all
+                        wearing black suits with a kippot, <dfn title="A cylindrical fur hat">shtreimel</dfn> or a black
+                        hat.</p>
+
+                    <h3 class="post-heading">
+                        Cult
+                    </h3>
+                    <p>I went with Kiều on the weekend to the Hương Temple complex. According to legend, this temple was
+                        discovered by a monk who meditated around the mountains where this complex is situated. The
+                        temple itself is named after where it is thought the Buddha practiced asceticism. It was a
+                        wonderfully designed place, with decorative architecture and a lot of nature. Kiều made sure to
+                        enlighten me with the histories of each of the temples we visited. We also went to the Hương
+                        Tích Cave, which felt like entering a dragon, it's a great experience.
+                    </p>
+                    <iframe title="Huong Temple Complex map"
+                        src="https://www.google.com/maps/d/embed?mid=1MYR-MBXuNWxDSB3Y0sRoF-y87dp9EWc&ehbc=2E312F"></iframe>
+                    <p>
+                        There's a huge green statue of the Buddha in there along with a plethora of others. Every temple
+                        there had a statue of the Buddha somewhere. As well, there were candles and the smell of incense
+                        present—brings me back to some family gatherings. We stopped last at the Thiên Trù Pagoda, which
+                        is the central temple of the complex, where I observed people worshipping. Most people here who
+                        were doing so were silently meditating. Some made offerings which represented showing respect to
+                        the Three Jewels. They would light incense, light a candle then give an offering of some sort of
+                        fruit or flowers. Kiều made a big distinction to me, however, that Buddhists do not worship
+                        the Buddha, nor any other deities. This is different from Christianity where one would worship
+                        God.
+                        Buddhists only highly regard the Buddha and follow his teachings.
+                    </p>
+                    <h3 class="post-heading">
+                        Community
+                    </h3>
+                    <p>
+                        On May 23, I went with Kiều to celebrate Vesak, which takes place on the day of the full moon in
+                        during that month. Kiều was pretty excited to show me this one as Vesak is a celebration of
+                        the Buddha's birth and enlightenment. I went with Kiều to observe the celebration at night time
+                        at
+                        the Trấn Quốc Pagoda, as that lined up with our schedules. However, people celebrate Vesak for
+                        the whole day. It was around 8:20 PM there, which was a few hours after the sunset, so we
+                        couldn't see much, but that was outshined by the myriad of lights in the area. Most noticeable
+                        was the huge lotus lantern.
+                    </p>
+                    <img src="../img/vesak-lotus.jpg"
+                        alt="A body of water with a large lotus lamp and small lanterns floating">
+                    <p class="caption">
+                        <caption>The huge (huge!) lotus flower.</caption>
+                    </p>
+                    <p>Kiều told me a while ago that lotus flowers are a key symbol in Buddhism. Around the time that we
+                        went to the Hương Temple, we stopped by to visit a lotus pond in Xuân Đỉnh. She told me how
+                        important the lotus was in Buddhism by showing how they grow. The water in the pond was pretty
+                        muddy, evident by how my shoes looked after the visit. However, the lotus grew in this area
+                        despite the conditions. Therefore, the lotus represents enlightenment, as well as the suffering
+                        in <i>samsara</i>, or life, death and rebirth, that the person endured. Even though the lotus is
+                        rooted in the muddy waters of suffering, it blossoms clear and beautifully in the end. This
+                        makes lotus such a fitting symbol during Vesak especially, to represent the blooming of the one
+                        Buddhists base their life around through his teachings.</p>
+                    <img class="vertical" src="../img/tran-quoc-pagoda.jpg" alt="A pagoda at night lit up by lights">
+                    <p class="caption">
+                        <caption>The Trấn Quốc Pagoda at night.</caption>
+                    </p>
+                    <p>There were also many chanting, meditating and giving offerings. Paired with the multitude of
+                        lanterns over the waters gave the place a very calming atmosphere. It felt like the birth of
+                        something new—refreshing. This was my last day here so achieving a feeling like this was
+                        amazing. It allowed me to reflect on all that I learned in this trip, the new knowledge that
+                        came out of it that I will be able to use for the rest of my life.</p>
+                    <h3 class="post-heading">
+                        Farewell, Vietnam!
+                    </h3>
+                    <p>A big thank-you to Kiều for helping me so much in this whole trip. You gave me an unforgettable
+                        experience in Vietnam. Thank you for the art, by the way!</p>
+                    <p class="special-message" lang="vi">Nếu Kiều đang đọc cái blog này,</p>
+                    <p lang="vi"><i>Đây là một trải nghiệm vui vẻ và thú vị. Tôi chắc chắn sẽ ghé thăm Vietnam một lần
+                            nữa. Cảm ơn
+                            bạn đã hướng dẫn và chỉ cho tôi tham quan xung quanh Vietnam!</i></p>
+                </div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div id="about" class="item">
+                    <img src="../img/pfp.jpg" alt="profile picture of the author">
+                    <h3>ABOUT THE AUTHOR</h3>
+                    <p>I'm Vivian! I grew up in Canada but my desire to learn has brought me around the world. I love to
+                        document and learn about the people, locations, food, as well as the religions.</p>
+                    <a href="../about.html">READ MORE</a>
+                </div>
+                <div id="subscribe" class="item">
+                    <iframe title="for-form-submission" name="form" id="email-input"></iframe>
+                    <form action="form" method="post" target="form">
+                        <h3>SUBSCRIBE</h3>
+                        <label for="email-subscription">Enter your email address</label>
+                        <input type="text" class="text-input" id="email-subscription" placeholder="name@example.com"
+                            autocomplete="off">
+                    </form>
+                </div>
+                <div id="recent-posts" class="item">
+                    <h2>RECENT POSTS</h2>
+                    <div class="post">
+                        <p class="date">November 5, 2024</p>
+                        <h3>Hinduism and Mount Everest</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">October 8, 2024</p>
+                        <h3>Food in Greenpoint: The Little Poland of Brooklyn</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">May 18, 2024</p>
+                        <h3>The Lost Language of Vietnam</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="post">
+                        <p class="date">January 22, 2024</p>
+                        <h3>I Got Pickpocketed! How Not To Be Like Me</h3>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="foot-row">
+                <h1 class="footer-title"><a href="../index.html">WANDERING THE FAITHS</a></h1>
+            </div>
+            <div class="foot-row">
+                <h2>VIVIAN TRAN</h2>
+                <ul>
+                    <li><a class="foot-link" href="../about.html">About</a></li>
+                    <li><a class="foot-link" href="mailto:viviblogproject@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-row">
+                <h2>TRAVEL</h2>
+                <ul>
+                    <li><a class="foot-link" href="../new-york/new-york.html">New York</a></li>
+                    <li><a class="foot-link" href="../hanoi/hanoi.html">Hanoi</a></li>
+                    <li><a class="foot-link" href="../kathmandu/kathmandu">Kathmandu</a></li>
+                </ul>
+            </div>
+            <div class="foot-row media">
+                <div class="icons">
+                    <a class="foot-link" href="https://github.com/vyarin"><span class="icon-text">Github</span><i
+                            class="bi bi-github"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Google</span><i class="bi bi-google"></i></a>
+                    <a class="foot-link" href="https://twitter.com/wanderingfaiths"><span
+                            class="icon-text">Twitter</span><i class="bi bi-twitter"></i></a>
+                    <a class="foot-link" href="#"><span class="icon-text">Youtube</span><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+                <p>Copyright &#169; 2023 Vivian Tran</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
