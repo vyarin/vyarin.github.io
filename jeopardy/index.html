@@ -157,41 +157,45 @@
 
         <div id="start-screen" class="start-screen" aria-hidden="false">
             <div class="config">
+                <div>
                 <div class="game-title">
                     <img class="logo-title" title="AP Jeopardy! Logo" alt="AP Jeopardy! Title"
                         src="./img/jeo-pa-rdy-logo.svg">
                     <h2 class="subtitle">STATISTICS EDITION</h2>
                 </div>
-                <form id="config">
-                    <div>
-                        <h3>Player 1</h3>
-                        <div id="p1" class="signature-pad">
-                            <label for="p1-name-input">Type your name:</label>
-                            <input title="Player 1 Name" type="text" id="p1-name-input" name="p1-name-input" class="name-input"
-                                placeholder="Name" maxlength="16" required="true">
+            </div>
+                <div>
+                    <form id="config">
+                        <div>
+                            <h3>Player 1</h3>
+                            <div id="p1" class="signature-pad">
+                                <label for="p1-name-input">Type your name:</label>
+                                <input title="Player 1 Name" type="text" id="p1-name-input" name="p1-name-input" class="name-input"
+                                    placeholder="Name" maxlength="16" required="true">
 
-                            <label for="p1-canvas">Write your name:</label>
-                            <canvas id="p1-canvas"></canvas>
-                            <button type="button" class="clear" id="p1-clear">Clear</button>
+                                <label for="p1-canvas">Write your name:</label>
+                                <canvas id="p1-canvas"></canvas>
+                                <button type="button" class="clear" id="p1-clear">Clear</button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <h3>Player 2</h3>
-                        <div id="p2" class="signature-pad">
-                            <label for="p2-name-input">Type your name:</label>
-                            <input title="Player 2 Name" type="text" id="p2-name-input" name="p2-name-input" class="name-input"
-                                placeholder="Name" maxlength="16" required="true">
+                        <div>
+                            <h3>Player 2</h3>
+                            <div id="p2" class="signature-pad">
+                                <label for="p2-name-input">Type your name:</label>
+                                <input title="Player 2 Name" type="text" id="p2-name-input" name="p2-name-input" class="name-input"
+                                    placeholder="Name" maxlength="16" required="true">
 
-                            <label for="p2-canvas">Write your name:</label>
-                            <canvas id="p2-canvas" width="200px"></canvas>
-                            <button type="button" class="clear" id="p2-clear">Clear</button>
+                                <label for="p2-canvas">Write your name:</label>
+                                <canvas id="p2-canvas" width="200px"></canvas>
+                                <button type="button" class="clear" id="p2-clear">Clear</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="submission">
-                        <input id="start-game" type="submit" class="hide">
-                    </div>
-                </form>
+                        <div class="submission">
+                            <input id="start-game" type="submit" class="hide">
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="menu">
                 <div id="instructions-menu" class="hide">
