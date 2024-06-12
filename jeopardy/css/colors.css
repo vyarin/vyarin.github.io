@@ -1,0 +1,12 @@
+:root {
+    --background-blue: #364987;
+    --jeopardy-blue: #222D62;
+    --jeopardy-black: #171A1C;
+    --jeopardy-yellow: #F7E55B;
+    --jeopardy-grey: #1E2327;
+    --ap-blue: #28ABE2;
+    --ap-green: #96C950; 
+    --white: #FEFEFE;
+    --error-red: #DC344D;
+    color-scheme: dark;
+}

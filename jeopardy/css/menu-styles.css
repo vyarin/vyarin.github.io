@@ -1,0 +1,292 @@
+body {
+    background-color: var(--background-blue);
+    color: var(--white);
+}
+
+.obscure {
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: row;
+    /* display: none; */
+    background-color: var(--jeopardy-black);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%; /* idk why min */
+    padding: 4.5em;
+    border-radius: 1.4em;
+    transition: all 1s ease-in-out;
+}
+
+.config {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide {
+    animation-duration: 2s;
+    animation-name: slideout;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideout {
+    from {
+        transform: translate(-50%, -50%);
+    }
+
+    18% {
+        transform: translate(-50%, -40%);
+    }
+
+    to {
+        transform: translate(-50%, -200%);
+    }
+
+}
+
+.game-title {
+    display: block;
+}
+
+.logo-title {
+    width: 70%;
+}
+
+.subtitle {
+    margin-top: 0.4em;
+    margin-bottom: 0;
+    /* padding-left: 0.2em; */
+    font-size: 2em;
+    color: var(--white);
+    font-family: "Bebas Neue", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+#config {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: flex;
+    column-gap: 3em;
+}
+
+.signature-pad {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6em;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.name-input {
+    margin-bottom: 1em;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: var(--white) 2px solid;
+    padding: 0.4em 0.2em;
+    color: var(--white);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+}
+
+#p1 > .name-input:focus {
+    border-color: var(--ap-green);
+}
+
+#p2 > .name-input:focus {
+    border-color: var(--ap-blue);
+}
+
+canvas {
+    margin-bottom: 0.5em;
+    border-bottom: var(--white) 2px solid;
+    transition: all 0.3s;
+    width: 13rem;
+    height: 8rem;
+}
+
+canvas:hover {
+    cursor: crosshair;
+}
+
+#p1 > canvas:hover {
+    border-color: var(--ap-green);
+}
+
+#p2 > canvas:hover {
+    border-color: var(--ap-blue);
+}
+
+.cleared {
+    border-bottom-color: var(--error-red);
+}
+
+.clear, .menu-exit, .end-game, .play-again {
+    padding: 0.5em;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 2.6em;
+    background-color: var(--jeopardy-black);
+    border: var(--white) 2px solid;
+    border-radius: 0.4em;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.clear:hover{
+    background-color: var(--error-red);
+    /* border-color: var(--error-red); */
+    cursor: pointer;
+}
+
+.menu-exit:hover {
+    background-color: var(--ap-blue);
+    cursor: pointer;
+}
+
+.clear:active {
+    transform: scale(0.95);
+}
+
+.menu {
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end;
+    justify-content: space-between; */
+    flex: 1 1 auto;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.menu-items {
+    min-width: 100%;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    flex: 1 1 auto;
+}
+
+.option {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--jeopardy-grey);
+    padding: 1.3em;
+    font-size: 1.5em;
+    border-radius: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.option:hover {
+    background-color: #23292E;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+a, a:hover, a:focus, a:active {
+    color: var(--white);
+    text-decoration: none; 
+}
+
+.submit-label {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease-in-out;
+    border: var(--white) 2px solid;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+.submit {
+    box-sizing: border-box;
+    display: flex;
+    /* display: none; */
+    flex-direction: row;
+    justify-content: flex-end;
+    min-width: 100%;
+    padding: 0.6em 0.2em;
+    /* border-bottom: var(--white) 2px solid; */
+    font-size: 2em;    
+}
+
+.submit-label:hover {
+    background-color: var(--ap-green);
+    border-color: var(--ap-green);
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+#instructions-menu {
+    height: 100%;
+}
+
+.instructions-text {
+    height: 90%;
+    overflow: auto;
+    margin-bottom: 1em;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-profiles {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    margin-bottom: 1em;
+}
+
+.player-container {
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: var(--jeopardy-grey);
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container {
+    width: 10em;
+    height: 10em;
+}
+
+.img-container > img {
+    height: 100%;
+}
+
+.cycle {
+    background-color: #252a2e;
+    border: none;
+    border-radius: 0.2em;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.cycle:hover {
+    background-color: #31383c;
+}
+
+
+

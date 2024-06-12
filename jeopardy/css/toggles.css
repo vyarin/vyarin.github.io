@@ -1,0 +1,25 @@
+.hide {
+    display: none;
+}
+
+.grey-out-button {
+    border: #959ab4 2px solid;
+    color: #959ab4;
+}
+
+.grey-out-button:hover {
+    background-color: transparent;
+    transform: scale(1.0);
+    cursor: default;
+}
+
+.grey-out-clue {
+    background-color: #1A2243;
+    color: #CCC061;
+}
+
+.grey-out-clue:hover {
+    cursor: default;
+    background-color: #1A2243;
+    color: #CCC061;
+}

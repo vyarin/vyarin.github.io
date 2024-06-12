@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./img/icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Bebas+Neue&family=Inter+Tight:wght@800&family=Montserrat:wght@100..900&family=Nanum+Pen+Script&family=Crimson+Pro:wght@200..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/menu-styles.css">
+    <link rel="stylesheet" href="./css/player-styles.css">
+    <link rel="stylesheet" href="./css/clue-styles.css">
+    <link rel="stylesheet" href="./css/game-styles.css">
+    <link rel="stylesheet" href="./css/toggles.css">
+
+    <script type="text/javascript" src="./js/questions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+    <script src="./js/game.js"></script>
+
+    <title>AP Jeopardy!</title>    
+</head>
+
+<body>
+    <div class="jeopardy-game">
+        <div id="game" class="game obscure">
+            <div id="win-container" class="win-container hide">
+                <div id="win-message" class="win-message">
+                    
+                </div>
+                <div>
+                    <img title="Winner!" id="winner-img" src="img/tie.png">
+                </div>
+                <div>
+                    <h2>Thank you for playing!</h2>
+                </div>
+                <div>
+                    <button id="play-again" class="play-again" type="button">Play Again</button>
+                </div>
+            </div>
+            <div class="end-game-container">
+                <button type="button" id="end-game" class="end-game">End Game</button>
+            </div>
+            <div class="side">
+                <div class="player">
+                    <div class="player-profile-container">
+                        <img title="Player 1 Profile Image" id="p1-profile" class="profile" src="./img/profiles/014.png">
+                    </div>
+                    
+                    <div id="p1-score" class="stat score">
+                        $0
+                    </div>
+                    <div id="p1-increment" class="increment p1">
+                        <button type="button" class="modify-balance subtract">
+                            −
+                        </button>
+                        <button type="button" class="modify-balance add">
+                            +
+                        </button>
+                    </div>
+                    <div id="p1-name" class="stat name">
+                        Player 1
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <img class="game-title" title="AP Jeopardy! Logo" alt="AP Jeopardy! Title"
+                    src="./img/jeo-pa-rdy-logo.svg">
+                <div class="board">
+                    <div class="cell category">RANDOMNESS, PROBABILITY, AND SIMULATION</div>
+                    <div class="cell category">PROBABILITY RULES</div>
+                    <div class="cell category">CONDITIONAL PROBABILITY AND INDEPENDENCE</div>
+                    <div class="cell category">RANDOM VARIABLES</div>
+                    <div class="cell category">TRANSFORMING RANDOM VARIABLES</div>
+                    <div class="cell category">PROBABILITY DISTRIBUTIONS</div>
+                    <!-- change maybe how these are buttons...s -->
+                    <div class="cell"><div class="clue" data-row="0" data-col="0">$200</div></div>
+                    <div class="cell"><div class="clue" data-row="0" data-col="1">$200</div></div>
+                    <div class="cell"><div class="clue" data-row="0" data-col="2">$200</div></div>
+                    <div class="cell"><div class="clue" data-row="0" data-col="3">$200</div></div>
+                    <div class="cell"><div class="clue" data-row="0" data-col="4">$200</div></div>
+                    <div class="cell"><div class="clue" data-row="0" data-col="5">$200</div></div>
+
+                    <div class="cell"><div class="clue" data-row="1" data-col="0">$400</div></div>
+                    <div class="cell"><div class="clue" data-row="1" data-col="1">$400</div></div>
+                    <div class="cell"><div class="clue" data-row="1" data-col="2">$400</div></div>
+                    <div class="cell"><div class="clue" data-row="1" data-col="3">$400</div></div>
+                    <div class="cell"><div class="clue" data-row="1" data-col="4">$400</div></div>
+                    <div class="cell"><div class="clue" data-row="1" data-col="5">$400</div></div>
+
+                    <div class="cell"><div class="clue" data-row="2" data-col="0">$600</div></div>
+                    <div class="cell"><div class="clue" data-row="2" data-col="1">$600</div></div>
+                    <div class="cell"><div class="clue" data-row="2" data-col="2">$600</div></div>
+                    <div class="cell"><div class="clue" data-row="2" data-col="3">$600</div></div>
+                    <div class="cell"><div class="clue" data-row="2" data-col="4">$600</div></div>
+                    <div class="cell"><div class="clue" data-row="2" data-col="5">$600</div></div>
+
+                    <div class="cell"><div class="clue" data-row="3" data-col="0">$800</div></div>
+                    <div class="cell"><div class="clue" data-row="3" data-col="1">$800</div></div>
+                    <div class="cell"><div class="clue" data-row="3" data-col="2">$800</div></div>
+                    <div class="cell"><div class="clue" data-row="3" data-col="3">$800</div></div>
+                    <div class="cell"><div class="clue" data-row="3" data-col="4">$800</div></div>
+                    <div class="cell"><div class="clue" data-row="3" data-col="5">$800</div></div>
+
+                    <div class="cell"><div class="clue" data-row="4" data-col="0">$1000</div></div>
+                    <div class="cell"><div class="clue" data-row="4" data-col="1">$1000</div></div>
+                    <div class="cell"><div class="clue" data-row="4" data-col="2">$1000</div></div>
+                    <div class="cell"><div class="clue" data-row="4" data-col="3">$1000</div></div>
+                    <div class="cell"><div class="clue" data-row="4" data-col="4">$1000</div></div>
+                    <div class="cell"><div class="clue" data-row="4" data-col="5">$1000</div></div>
+                </div>
+            </div>
+            <div class="side">
+                <div class="player">
+                    <div class="player-profile-container">
+                        <img title="Player 2 Profile Image" id="p2-profile" class="profile" src="./img/profiles/007.png">
+                    </div>
+                    <div id="p2-score" class="stat score">
+                        $0
+                    </div>
+                    <div id="p2-increment" class="increment p2">
+                        <button type="button" class="modify-balance subtract">
+                            −
+                        </button>
+                        <button type="button" class="modify-balance add">
+                            +
+                        </button>
+                    </div>
+                    <div id="p2-name" class="stat name">
+                        Player 2
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="card" class="hide">
+            <div class="clue-wrapper">
+                <div id="card-question-answer" class="question">
+                    
+                </div>
+                <div id="card-image" class="image">
+                    
+                </div>
+                <div id="message" class="question">
+
+                </div>
+                <div class="action-buttons">
+                    <button type="button" id="exit" class="action-button exit">Exit</button>
+                    <button type="button" id="reveal-answer" class="action-button reveal-answer">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="start-screen" class="start-screen" aria-hidden="false">
+            <div class="config">
+                <div class="game-title">
+                    <img class="logo-title" title="AP Jeopardy! Logo" alt="AP Jeopardy! Title"
+                        src="./img/jeo-pa-rdy-logo.svg">
+                    <h2 class="subtitle">STATISTICS EDITION</h2>
+                </div>
+                <form id="config">
+                    <div>
+                        <h3>Player 1</h3>
+                        <div id="p1" class="signature-pad">
+                            <label for="p1-name-input">Type your name:</label>
+                            <input title="Player 1 Name" type="text" id="p1-name-input" name="p1-name-input" class="name-input"
+                                placeholder="Name" maxlength="16" required="true">
+
+                            <label for="p1-canvas">Write your name:</label>
+                            <canvas id="p1-canvas"></canvas>
+                            <button type="button" class="clear" id="p1-clear">Clear</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Player 2</h3>
+                        <div id="p2" class="signature-pad">
+                            <label for="p2-name-input">Type your name:</label>
+                            <input title="Player 2 Name" type="text" id="p2-name-input" name="p2-name-input" class="name-input"
+                                placeholder="Name" maxlength="16" required="true">
+
+                            <label for="p2-canvas">Write your name:</label>
+                            <canvas id="p2-canvas" width="200px"></canvas>
+                            <button type="button" class="clear" id="p2-clear">Clear</button>
+                        </div>
+                    </div>
+                    <div class="submission">
+                        <input id="start-game" type="submit" class="hide">
+                    </div>
+                </form>
+            </div>
+            <div class="menu">
+                <div id="instructions-menu" class="hide">
+                    <div class="instructions-text">
+                        <h4>Instructions</h4>
+                        <p>Welcome to AP Jeopardy! This is a Jeopardy!-inspired game that serves as a review for the AP Statistics Probability unit.</p>
+                        <p>In order to play, type in your name, and optionally write your name in the box below it. You can also customize your character that will appear once you start the game in the “Edit Profile” menu. You must do this for both players, but it is fine to play alone, or even with two teams.</p>
+                        <p>Once finished, click “Play!”</p>
+                        <h4>The Game</h4>
+                        <p>The menu will now disappear, leaving you with a familiar Jeopardy! board. On the left and right side, you will be able to see both players with your chosen profile and name. Right below each player’s balance, which for now reads as “$0”, you will see a minus and plus button. These allow you to change the balance of each player whenever they answer a question right or wrong.</p>
+                        <p>To open a clue, click any one of the dollar amounts (ex. $200 or $1000) under any category. This will display a clue that a player can answer. <b>Make sure to have paper, a writing utensil, and a calculator at hand, as some require multiple steps.</b> Once the player comes up with an answer, they can click the “Reveal Answer” button to reveal the answer.</p>
+                        <p>If the player answers wrong, they lose that dollar amount and the other player has a chance to answer. Distribute points accordingly. If you are playing alone, this is optional.</p>
+                        <p>Once all the clues have been answered, or anytime when you want to end the game, you can press the “End Game” button.</p>
+                        <p>The player with the most points wins!</p>
+                    </div>
+                    <div>
+                        <button type="button" id="exit-instructions" class="menu-exit">Exit</button>
+                    </div>
+                </div>
+                <div id="profile-menu" class="hide">
+                    <div class="profiles">
+                        <div>
+                            <h2>Edit Profile</h2>
+                        </div>
+                        <div class="player-profiles">
+                            <div class="player-container">
+                                <div>
+                                    <h3>Player 1</h3>
+                                    <p>Your profile will appear on the left side of the screen.</p>
+                                </div>
+                                
+                                <div class="profile-container">
+                                    <button type="button" id="p1-cycle-left" class="cycle" data-direction="0" data-player="1"><</button>
+                                    <div class="img-container">
+                                        <img title="Player 1 Selected Profile" id="p1-profile-img" src="./img/profiles/000.png">
+                                    </div>
+                                    <button type="button" id="p1-cycle-right" class="cycle" data-direction="1" data-player="1">></button>
+                                </div>
+                            </div>
+                            <div class="player-container">
+                                <div>
+                                    <h3>Player 2</h3>
+                                    <p>Your profile will appear on the right side of the screen.</p>
+                                </div>
+
+                                <div class="profile-container">
+                                    <button type="button" id="p2-cycle-left" class="cycle" data-direction="0" data-player="2"><</button>
+                                    <div class="img-container">
+                                        <img title="Player 2 Selected Profile" id="p2-profile-img" src="./img/profiles/000.png">
+                                    </div>
+                                    <button type="button" id="p2-cycle-right" class="cycle" data-direction="1" data-player="2">></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" id="exit-edit-profile" class="menu-exit">Save and Exit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu-items" class="menu-items">
+                    <div id="instructions" class="option">
+                        <div>
+                            Instructions
+                        </div>
+                    </div>
+                    <div id="edit-profile" class="option">
+                        <div>
+                            Edit Profile
+                        </div>
+                    </div>
+                    <a href="https://github.com/vyarin" target="_blank" rel="noopener" class="option">
+                        <div>
+                            My Github
+                        </div>
+                    </a>
+                </div>
+                <div id="submit" class="submit">
+                    <label for="start-game" tabindex="0" class="submit-label">
+                        Play!
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

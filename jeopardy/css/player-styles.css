@@ -1,0 +1,85 @@
+.player-profile-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.profile {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.player {
+    display: grid;
+    height: 55%;
+    width: 45%;
+    /* gap: 0.2em; */
+    grid-template-rows: 3fr 2fr 1fr 3fr;
+    font-size: 1.5em; 
+    /* background-color: #110E29; */
+}
+
+.stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--jeopardy-blue);
+    border: 0.4rem solid var(--jeopardy-black);
+    color: #FEFEFE;
+}
+
+.score {
+    font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px var(--jeopardy-black);
+}
+
+.increment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 0 0.4rem 0 0.4rem;
+    border-style: solid;
+    border-color: var(--jeopardy-black);
+}
+
+.p1 {
+    background-color: #DC3472;
+}
+
+.p2 {
+    background-color: #4EC8C8;
+}
+
+.name {
+    font-family: "Nanum Pen Script", "Bradley Hand ITC", "Comic Sans MS", cursive;
+    grid-row-start: 4;
+    /* inline-size: 120px; */
+    /* overflow-wrap: break-all; */
+}
+
+.name > svg {
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content; /*  ummm change */
+}
+
+.modify-balance {
+    margin: 0 0.5em;
+    border: 0;
+    height: 100%;
+    background-color: transparent;
+    font-family: "Montsterrat", Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #FEFEFE;
+    transition: all 0.3s ease-in-out;
+}
+
+.modify-balance:hover {
+    transform: scale(1.20);
+}
+
+.modify-balance:active {
+    transform: scale(0.95);
+}
