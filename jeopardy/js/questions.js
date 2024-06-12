@@ -61,11 +61,13 @@ const data = [
             {
                 "type": "frq",
                 "question": "If events N (P(N) = 0.004) and M (P(M) = 0.67) are mutually exclusive, what is the probability of P(N ∩ M)?",
+                "has-image": false,
                 "answer": "P(N ∩ M) = 0"
             },
             {
                 "type": "frq",
                 "question": "Fauna has five coins: 1 dime, 3 quarters, and 1 loonie. Cephalobot has four coins: 1 quarter, 2 loonies, and 1 nickel. Each person randomly draws one of their coins, and the winner is the person with the highest valued coin. If both coins have the same value then they tie. Who is more likely to win this game?",
+                "has-image": false,
                 "answer": "Creating a probability model of this game shows that Cephalobot wins more times than Fauna. Therefore, Cephalobot is more likely to win this game."
             },
             {
@@ -134,6 +136,12 @@ const data = [
         "category": "DISCRETE AND CONTINUOUS RANDOM VARIABLES",
         "questions": [
             {
+                "type": "frq",
+                "question": "What must be the area under a density curve in order for it to describe a valid probability distribution?",
+                "has-image": false,
+                "answer": "Area = 1"
+            },
+            {
                 "type": "mcq",
                 "question": "What is the formula for calculating the expected value, E(X) of a random variable?<br><ol type=\"A\"><li><span>E(X) = (ΣX<sub>i</sub>)/n</span></li><li><span>E(X) = 1/(ΣP<sub>X</sub>)</span></li><li><span>E(X) = ΣX<sub>i</sub>p<sub>i</sub></span></li><li><span>E(X) =(Σ(X<sub>i</sub> - P<sub>i</sub>))/σ<sub>X</sub></span></li><li><span>E(X) = np</span></li></ol>",
                 "has-image": false,
@@ -153,9 +161,18 @@ const data = [
                 "image": "cat4-400.svg",
                 "answer": "<span>σ</span><sub>X</sub> = 0.9355"
             },
-            {},
-            {},
-            {}
+            {
+                "type": "frq",
+                "question": "Statistics Canada reports that the average male age 12 to 19 has a grip strength that approximately follows a Normal distribution with a mean of 48.5 kg and a standard deviation of 10.3. Find the 30th percentile of this distribution.",
+                "has-image": false,
+                "answer": "We can use the <span>Inverse Normal</span> function for this problem. 30th percentile = the bottom 30% = 0.3. Therefore, the 30th percentile = <span>invNorm</span>(0.3, 48.5, 10.3) = 43.0987 kg."
+            },
+            {
+                "type": "frq",
+                "question": "Filbert waits for his school bus every morning. Let X = the amount of minutes Filbert has to wait for his bus on a randomly selected day in minutes. The probability distribution of X can be modelled by a Normal distribution with a mean of 4.3 minutes and a standard deviation of 2.2 minutes. Find the probability that Filbert has to wait between 1 and 5 minutes for the school bus.",
+                "has-image": false,
+                "answer": "We can use the <span>Normal CDF</span> function for this problem. P(1 ≤ X ≤ 5) = <span>normCdf</span>(1, 5, 4.3, 2.2) = 0.5580."
+            }
         ]
     },
     {
@@ -172,7 +189,18 @@ const data = [
                 ],
                 "answer": 0
             },
-            {},
+            {
+                "type": "mcq",
+                "question": "What is the rule for adding or subtracting the mean of a random variable?<br><ol type=\"A\"><li><span>μ<sub>X+Y</sub> = |μ<sub>X</sub> * μ<sub>Y</sub>|; μ<sub>X+Y</sub> = |μ<sub>X</sub>/μ<sub>Y</sub>|</span></li><li><span>μ<sub>X+Y</sub> = μ<sub>X-Y</sub> = √(μ<sub>X</sub><sup>2</sup> + μ<sub>Y</sub><sup>2</sup>)</span></li><li><span>μ<sub>X+Y</sub> = μ<sub>X-Y</sub> = √(μ<sub>X</sub>) + √(μ<sub>Y</sub>)</span></li><li><span>μ<sub>X+Y</sub> = μ<sub>X</sub> + μ<sub>Y</sub>; μ<sub>X-Y</sub> =  μ<sub>X</sub> - μ<sub>Y</sub></span></li></ol>",
+                "has-image": false,
+                "options": [
+                    "A. <span>μ<sub>X+Y</sub> = |μ<sub>X</sub> * μ<sub>Y</sub>|; μ<sub>X+Y</sub> = |μ<sub>X</sub>/μ<sub>Y</sub>|</span>",
+                    "B. <span>μ<sub>X+Y</sub> = μ<sub>X-Y</sub> = √(μ<sub>X</sub><sup>2</sup> + μ<sub>Y</sub><sup>2</sup>)</span>",
+                    "C. <span>μ<sub>X+Y</sub> = μ<sub>X-Y</sub> = √(μ<sub>X</sub>) + √(μ<sub>Y</sub>)</span>",
+                    "D. <span>μ<sub>X+Y</sub> = μ<sub>X</sub> + μ<sub>Y</sub>; μ<sub>X-Y</sub> =  μ<sub>X</sub> - μ<sub>Y</sub></span>"
+                ],
+                "answer": 3
+            },
             {
                 "type": "frq",
                 "question": "The mean SAT score in Texas for high school seniors is 1020 points with a standard deviation of 193. A class of 30 students wants to estimate their combined SAT score without sharing theirs. What is the standard deviation of their combined score?",
@@ -202,7 +230,18 @@ const data = [
                 "has-image": false,
                 "answer": "Binary (success or failure), independent, fixed probability, fixed trials."
             },
-            {},
+            {
+                "type": "frq",
+                "question": "How is the standard deviation of a geometric random variable calculated?",
+                "has-image": false,
+                "answer": "<span>σ<sub>X</sub> = (√(1−p))/p</span>"
+            },
+            {
+                "type": "frq",
+                "question": "Does this scenario describe a geometric setting? For a special event, a popular trading card company puts a holographic card of 1 of 4 of their special characters, Dizzy, Mitzy, Judy, or Cherry in each pack. There is an equal probability for any of the special characters to end up in any pack of cards. Buy packs of cards until you get all 4 holographic cards.",
+                "has-image": false,
+                "answer": "This is not a geometric setting. We are not selecting cards until we get one success. It is also not possible to classify each of the possible cards found as a success or failure."
+            },
             {
                 "type": "frq",
                 "question": "During the start of the French Revolution, Ketchup kept fifty pieces of bread on his table. Each day, there is a 0.008849 probability for a rat to gobble up an entire piece of bread. By the time the revolution ends, 3841 days later, how many pieces of bread are expected to be on his table?",
@@ -214,8 +253,7 @@ const data = [
                 "question": "Lolly and Bob are playing a video game where they can gamble with a suspicious wizard to double all their money. However, the wizard has a 2.18% chance of stealing all their money. Lolly lost all her money after 83 tries and Bob lost all of his money after 221 tries. Lolly accuses Bob of using cheats to decrease his chances of losing. What is the probability that Bob lost his money after 221 tries or more and is there convincing evidence that he is using cheats?",
                 "has-image": false,
                 "answer": "Using <span>geomCdf</span> gives P(X ≥ 221) = 0.007836.<br>Because this probability is so small to realistically happen by chance, there is convincing evidence that Bob is using cheats to decrease his chances of losing."
-            },
-            {}
+            }
 
         ]
     }
