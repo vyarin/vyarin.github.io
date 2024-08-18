@@ -8,7 +8,7 @@ body {
     pointer-events: none;
 }
 
-#start-screen {
+.start-screen {
     display: flex;
     flex-direction: row;
     /* display: none; */
@@ -17,8 +17,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%; /* idk why min */
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 70%;
     padding: 4.5em;
     border-radius: 1.4em;
     transition: all 1s ease-in-out;
@@ -52,7 +53,8 @@ body {
 }
 
 .game-title {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-title {
@@ -166,6 +168,7 @@ canvas:hover {
     flex: 1 1 auto;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
+    width: 25em;
 }
 
 .menu-items {
@@ -288,5 +291,38 @@ a, a:hover, a:focus, a:active {
     background-color: #31383c;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .config {
+        justify-content: start;
+    }
+    .start-screen {
+        flex-direction: column;
+        row-gap: 1em;
+        height: fit-content;
+    }
+    .menu {
+        width: 100%;
+    }
+    .instructions-text {
+        font-size: 0.8em;
+    }
+}
 
-
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 2000px) {
+    body {
+        font-size: 1.2em;
+    }
+    .start-screen {
+        width: 60%;
+        height: 50%;
+    }
+    .config {
+        font-size: 1.2em;
+        justify-content: start;
+    }
+    .menu {
+        justify-content: start;
+    }
+}
