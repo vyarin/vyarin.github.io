@@ -60,7 +60,3 @@ button {
     flex-direction: row;
     column-gap: 3.5%;
 }
-
-div {
-    /* background-color: var(--primary-light); */
-}
