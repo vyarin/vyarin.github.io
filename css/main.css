@@ -18,26 +18,6 @@ button {
     margin: auto; 
 }
 
-#home {
-    display: flex;
-    flex-direction: column;
-    margin-top: 8vw;
-
-    button {
-        padding: 0.6em 1.2em;
-        border-color: var(--secondary);
-    }
-
-    .primary {
-        background-color: var(--secondary);
-        color: var(--background);
-    }
-
-    .secondary {
-        color: var(--secondary);
-    }
-}
-
 .title {
     color: var(--primary);
     font-family: Inter, Helvetica, Arial, sans-serif;
@@ -45,22 +25,6 @@ button {
     margin-bottom: 1.8rem;
 }
 
-#home-title {
-    font-weight: 900;
-    font-size: 4.4rem;
-}
-
 .emphasis {
     color: var(--secondary);
-}
-
-#home-subtitle {
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-#home-buttons {
-    display: flex;
-    flex-direction: row;
-    column-gap: 3.5%;
 }
