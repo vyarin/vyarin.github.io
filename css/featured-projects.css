@@ -1,0 +1,45 @@
+#projects-section {
+    background-color: var(--off-pink);
+}
+
+#projects-title .title {
+    font-size: 3rem;
+}
+
+#project-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#project-image {
+    width: 30%;
+    img {
+        position: sticky;
+        top: 0;
+    }
+    
+}
+
+#project-list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.project-item {
+    height: 50vw;
+    
+    button {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+}
