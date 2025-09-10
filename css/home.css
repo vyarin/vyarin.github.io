@@ -1,35 +1,165 @@
+/* INTRODUCTION */
+
+#welcome-message {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10vw;
+    margin: 16vw auto 20vw;
+    font-size: 1.8rem;
+
+    .dialogue-1 {
+        grid-area: 1 / 1 / 1 / end;
+    }
+
+    #dialogue-1 {
+        font-family: Inter, "Noto Sans Japanese", "Noto Sans Korean", "Noto Sans Traditional Chinese", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Tamil", "Noto Sans Arabic", Helvetica, Arial, sans-serif;;
+    }
+
+    .dialogue-2 {
+        grid-area: 2 / 3 / 2 / end;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #welcome-message {
+        row-gap: 0;
+        margin: 8.2vw auto 0;
+        font-size: 1.5rem;
+
+        .dialogue-2 {
+            grid-area: 2 / 2 / 2 / end;
+            font-size: 1.5rem;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    #welcome-message {
+        font-size: 2rem;
+
+        .dialogue-2 {
+            font-size: 2rem;
+        }
+    }
+}
+
 #home {
     display: flex;
     flex-direction: column;
+
     margin-top: 8vw;
 
     button {
-        padding: 0.6em 1.2em;
+        padding: 0.6rem 1.2rem;
         border-color: var(--secondary);
+        border-width: 4px;
     }
 
     .primary {
         background-color: var(--secondary);
-        color: var(--background);
+        a {
+            color: var(--background);
+            text-decoration: none;
+        }
+        
     }
 
     .secondary {
-        color: var(--secondary);
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
     }
 }
 
 #home-title {
     font-weight: 900;
-    font-size: 4.4rem;
+    font-size: 5rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 580px) {
+    #home-title {
+        .subword {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #home-title {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #home-title {
+        font-size: 8rem;
+  }
 }
 
 #home-subtitle {
-    font-weight: 500;
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    #home-subtitle {
+        width: 70%;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #home-subtitle {
+        width: 60%;
+        font-size: 1.2rem;
+  }
 }
 
 #home-buttons {
     display: flex;
-    flex-direction: row;
-    column-gap: 3.5%;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ABOUT */
+
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-desc {
+    .description {
+        width: 80%;
+        font-family: "League Spartan", Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.2rem;
+    }
+}
+
+#about-img {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    width: 80%;
+}
+
+@media screen and (min-width: 700px) {
+    #about-img {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #about-img {
+        width: 30%;
+  }
 }

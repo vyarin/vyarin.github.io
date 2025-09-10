@@ -1,0 +1,155 @@
+html {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+body {
+    background-color: var(--background);
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#contents {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+main {
+    #main-section {
+        display: flex; /* Accounts for sidebar ads */
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+/* For ad removal, remove divs and restore main */
+
+.ads {
+    display: none;
+}
+
+@media screen and (min-width: 1700px) {
+    .ads {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        align-items: center;
+
+        margin-top: 4rem;
+
+        img {
+            max-width: 60%;
+        }
+    }
+}
+
+a:link, a:visited{
+    color: var(--secondary);
+}
+
+a:active {
+    color: var(--primary);
+}
+
+.h-line {
+    width: 100%;
+    height: 0.02rem;
+    margin: 0.5rem auto;
+    padding: 0.07rem;
+    background-color: var(--text);
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    background: none;
+    /* border-radius: 3px;*/
+    /* border: 3px solid; */
+    cursor: pointer;
+}
+/* Old rounded buttons are commented out */
+
+.section {
+    width: 70vw;
+    margin: auto; 
+}
+
+/* 
+@media screen and (min-width: 1700px) {
+    .section {
+        width: 50vw;
+    }
+    Legacy for without ads stuff
+} */
+
+@media screen and (min-width: 1700px) {
+    .section {
+        width: auto;
+    }
+    
+} 
+
+.title {
+    color: var(--primary);
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    margin-bottom: 1.8rem;
+}
+
+.title.page-title {
+    margin-top: 4rem;
+}
+
+.emphasis {
+    color: var(--secondary);
+}
+
+.de-emphasis {
+    color: var(--primary-light);
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+::selection {
+  background: var(--highlight); /* WebKit/Blink Browsers */
+  color: var(--text);
+}
+::-moz-selection {
+  background: var(--highlight); /* Gecko Browsers */
+  color: var(--text);
+}

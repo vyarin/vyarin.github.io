@@ -1,0 +1,35 @@
+#footer {
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 70vw;
+    margin: auto;
+
+    font-size: 0.6rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    #footer-items {
+        width: 50vw;
+    }
+}
+
+#footer-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+
+    a {
+        color: var(--text);
+    }
+}
