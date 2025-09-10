@@ -1,3 +1,49 @@
-#about {
-    background-color: var(--primary-light);
+.title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: var(--primary);
+    overflow: hidden;
+    /* width: 14rem; */
+}
+
+
+@media screen and (min-width: 1700px) {
+    #about-opening {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+
+        h2 {
+            margin-top: 4rem;
+        }
+
+        div:first-child {
+            width: 60%;
+        }
+
+        div:last-child {
+            width: 40%;
+        }
+        
+        
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    #about-facts {
+        width: 90%;
+
+        ul {
+            width: 80%;
+        }
+    }
+}
+
+#isopod {
+    mix-blend-mode: multiply;
 }
