@@ -60,18 +60,13 @@
 
     .primary {
         background-color: var(--secondary);
-        a {
-            color: var(--background);
-            text-decoration: none;
-        }
-        
+        color: var(--background);
+        text-decoration: none;
     }
 
     .secondary {
-        a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
+        color: var(--secondary);
+        text-decoration: none;
     }
 }
 
